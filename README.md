@@ -35,7 +35,7 @@ const ignoreSpecialCharacters = false; // Default is true
 let encryptedText = encrypt(value, shift, ignoreSpecialCharacters);
 
 // Decrypt
-let encryptedText = encrypt(value, shift, ignoreSpecialCharacters);
+let decryptedText = decrypt(value, shift, ignoreSpecialCharacters);
 ```
 
 ## Contributing
