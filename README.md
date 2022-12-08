@@ -15,9 +15,9 @@ Install text-encrypter with npm/yarn
 
 #### Import
 
-```
+```javascript
 import { encrypt, decrypt } from 'text-encrypter'; // ES6
-const { encrypt, decrypt } = require("text-encrypter"); // CommonJS
+const { encrypt, decrypt } = require('text-encrypter'); // CommonJS
 ```
 
 #### Data
@@ -30,7 +30,7 @@ const ignoreSpecialCharacters = false; // Default is true
 
 #### Usage
 
-```
+```javascript
 // Encrypt
 let encryptedText = encrypt(value, shift, ignoreSpecialCharacters);
 
