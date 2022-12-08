@@ -1,31 +1,58 @@
-# NPM Module Boilerplate
+# Text Encrypter
 
-**Start developing your NPM module in seconds** ✨
+This is very small and lightweight library that is capable to encrypt and decrypt the text using caesar cipher mechanism.
 
-Readymade boilerplate setup with all the best practices to kick-start your npm/node module development.
+## Installation
 
-Happy hacking =)
+Install text-encrypter with npm/yarn
 
-# Features
+```bash
+  npm install text-encrypter // npm
+  yarn add text-encrypter // yarn
+```
 
-- **Microbundle** for bundling
-- **ES6/ESNext** - Write _ES6_ code and _Microbundle_ will make bundle of it to ES5 for backwards compatibility
-- **Test** - _Jest_ with _Istanbul_ coverage
-- **Lint** - Preconfigured _ESlint_ with best practices
-- **CI** - _TravisCI_ configuration setup
-- **Minify** - Built code will be minified for performance
+## Usage/Examples
 
-# Commands
+#### Import
 
-- `npm run lint` - Run ESlint
-- `npm run build` - Microbundle will transpile ES6 => ES5 and minify the code.
-- `npm run dev` - Microbundle will watch and create build on change.
-- `npm run test` - Run tests with jest.
+```
+import { encrypt, decrypt } from 'text-encrypter'; // ES6
+const { encrypt, decrypt } = require("text-encrypter"); // CommonJS
+```
 
-# Installation
+#### Data
 
-Just clone this repo and remove `.git` folder.
+```javascript
+const value = 'Hello World';
+const shift = 3; // Default is 1
+const ignoreSpecialCharacters = false; // Default is true
+```
 
-# License
+#### Usage
 
-MIT © Yousuf Kalim
+```
+// Encrypt
+let encryptedText = encrypt(value, shift, ignoreSpecialCharacters);
+
+// Decrypt
+let encryptedText = encrypt(value, shift, ignoreSpecialCharacters);
+```
+
+## Contributing
+
+- Fork it!
+- Create your feature branch: `git checkout -b my-new-feature`
+- Commit your changes: `git commit -am 'Add some feature'`
+- Push to the branch: `git push origin my-new-feature`
+- Submit a pull request :D
+
+## Author
+
+**text-encrypter** © [Yousuf](https://github.com/yousufkalim)  
+Authored and maintained by Yousuf Kalim.
+
+> GitHub [@yousufkalim](https://github.com/yousufkalim) · LinkedIn [@yousufkalim](https://www.linkedin.com/in/yousufkalim/)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
