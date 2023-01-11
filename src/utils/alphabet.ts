@@ -1,3 +1,7 @@
+/**
+ * Alphabet used for encoding/decoding.
+ * @author Yousuf Kalim
+ */
 const alphabet = [
   'a',
   'b',

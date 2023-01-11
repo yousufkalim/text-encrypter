@@ -1,5 +1,16 @@
+/**
+ * Index file for the package
+ * @author Yousuf Kalim
+ */
 import alphabet from './utils/alphabet';
 
+/**
+ * Encrypts a given plain text using the Caesar Cipher
+ * @param plainText {string} - The plain text to be encrypted
+ * @param shift {number} - The number of shifts to be applied to the plain text
+ * @param ignoreSpecialChars {boolean} - Whether to ignore special characters or not
+ * @returns {string} - The encrypted cipher text
+ */
 const encrypt = (plainText: string, shift = 1, ignoreSpecialChars = true): string => {
   const cipherArr: string[] = [];
   let cipherLetter: string;
@@ -25,6 +36,13 @@ const encrypt = (plainText: string, shift = 1, ignoreSpecialChars = true): strin
   return cipherArr.join('');
 };
 
+/**
+ * Decrypts a given cipher text using the Caesar Cipher
+ * @param cipherText {string} - The cipher text to be decrypted
+ * @param shift {number} - The number of shifts to be applied to the cipher text
+ * @param ignoreSpecialChars {boolean} - Whether to ignore special characters or not
+ * @returns {string} - The decrypted plain text
+ */
 const decrypt = (cipherText: string, shift = 1, ignoreSpecialChars = true): string => {
   const plainArr: string[] = [];
   let plainLetter: string;
