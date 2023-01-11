@@ -1,6 +1,6 @@
 {
   "name": "text-encrypter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The library to encrypt/decrypt text using caesar cipher mechanism",
   "type": "module",
   "source": "src/index.ts",
