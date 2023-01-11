@@ -1,14 +1,14 @@
-import alphabet from './utils/alphabet.js';
+import alphabet from './utils/alphabet';
 
-const encrypt = (plainText, shift = 1, ignoreSpecialChars = true) => {
-  let cipherArr = [];
-  let cipherLetter;
+const encrypt = (plainText: string, shift = 1, ignoreSpecialChars = true): string => {
+  const cipherArr: string[] = [];
+  let cipherLetter: string;
 
   plainText.split('').map((letter) => {
     if (ignoreSpecialChars) {
       letter = alphabet.includes(letter.toLowerCase()) ? letter : ' ';
     }
-    let code = letter.charCodeAt(letter);
+    const code: number = letter.charCodeAt(0);
     if (letter === ' ') {
       return cipherArr.push(letter);
     }
@@ -25,21 +25,21 @@ const encrypt = (plainText, shift = 1, ignoreSpecialChars = true) => {
   return cipherArr.join('');
 };
 
-const decrypt = (cipherText, shift = 1, ignoreSpecialChars = true) => {
-  let plainArr = [];
-  let plainLetter;
+const decrypt = (cipherText: string, shift = 1, ignoreSpecialChars = true): string => {
+  const plainArr: string[] = [];
+  let plainLetter: string;
 
   cipherText.split('').map((cipher) => {
     if (ignoreSpecialChars) {
       cipher = alphabet.includes(cipher.toLowerCase()) ? cipher : ' ';
     }
-    let code = cipher.charCodeAt(cipher);
+    const code: number = cipher.charCodeAt(0);
     if (cipher === ' ') {
       return plainArr.push(cipher);
     }
     // Uppercase letters
     if (code >= 65 && code <= 90) {
-      let diff = code - 65 - shift;
+      const diff = code - 65 - shift;
       if (diff >= 0) {
         plainLetter = String.fromCharCode((diff % 26) + 65);
       } else {
@@ -48,7 +48,7 @@ const decrypt = (cipherText, shift = 1, ignoreSpecialChars = true) => {
     }
     // Lowercase letters
     else if (code >= 97 && code <= 122) {
-      let diff = code - 97 - shift;
+      const diff = code - 97 - shift;
       if (diff >= 0) {
         plainLetter = String.fromCharCode((diff % 26) + 97);
       } else {

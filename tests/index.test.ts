@@ -1,5 +1,5 @@
 import { expect, test } from '@jest/globals';
-import { encrypt, decrypt } from '../src/index.js';
+import { encrypt, decrypt } from '../src';
 
 test('Check if plaintext to ciphertext conversion works', () => {
   const value = 'hackerrank';
